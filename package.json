@@ -1,0 +1,35 @@
+{
+  "name": "tiendaexpress-ci",
+  "version": "1.0.0",
+  "description": "Módulo de carrito y checkout de TiendaExpress con Integración Continua en Jenkins",
+  "main": "src/carrito.js",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "jest --ci"
+  },
+  "author": "Sergio Andrés Jaramillo Luna",
+  "license": "MIT",
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageDirectory": "reports/coverage",
+    "coverageReporters": [
+      "text",
+      "text-summary"
+    ],
+    "reporters": [
+      "default",
+      [
+        "jest-junit",
+        {
+          "outputDirectory": "reports",
+          "outputName": "junit.xml"
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-junit": "^16.0.0"
+  }
+}
