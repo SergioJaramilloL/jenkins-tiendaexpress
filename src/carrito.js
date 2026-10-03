@@ -1,7 +1,7 @@
 // TiendaExpress - Lógica del carrito y del total del checkout
 // Valores en pesos colombianos (COP).
 
-const COSTO_ENVIO = 15000;
+const COSTO_ENVIO = 12000;
 const MINIMO_ENVIO_GRATIS = 150000;
 
 const CUPONES = {
